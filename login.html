@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Logi and registration form design</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="login-page">
+<div class="form">
+	<form class="register-form">
+	<input type="text" placeholder=" User name" required />
+	<input type="password" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
+	<input type="email" placeholder="email id" required/>
+	<button>Create</button>
+	<p class="message">Already registered?<a href="#">Login</a>
+	</p>
+</form>
+<form class="login-form">
+	<input type="text" placeholder="user name" required />
+	<input type="password" placeholder="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required/>
+	
+		<button>login</button>
+	
+    <p class="message">Not registered? <a href="#">Register</a>
+    	</p>
+</form>
+</div>
+</div>
+
+<script src='https://code.jquery.com/jquery-3.2.1.min.js'>
+	</script>
+	<script>
+		$('.message a').click(()=>{
+			$('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+		});
+		// let mes=document.querySelector('.message');
+		// mes.addEventListener("click",()=>{
+		// 	document.querySelector('.form').animate({height: "toggle", opacity: "toggle"}, "slow");
+		// 	});
+
+	 </script>
+</body>
+</html>
+<!-- //.innerHTML="Hello" -->
